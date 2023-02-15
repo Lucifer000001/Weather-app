@@ -14,7 +14,8 @@ body {
 .scene {
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  max-height: fit-content;
   background: linear-gradient(#111425,#3751e0);
   background-attachment: fixed;
   overflow: hidden;
@@ -208,10 +209,8 @@ transform: rotate(269deg);
   display: flex;
   justify-content: space-evenly;
   text-align: center;
-  
+  margin-top: 20px;
   width: 100%;
-  margin: 1rem auto;
-  padding: 1rem;
   border-radius: 12px;
   background-color: rgba(255, 255, 255, 0.2);
 
@@ -224,6 +223,9 @@ transform: rotate(269deg);
   white-space: nowrap;
   width: 100%;
   scroll-behavior: smooth;
+}
+.container3::-webkit-scrollbar {
+  display: none;
 }
 .box1, .box2, .box3, .box4 {
   min-width: 50%;
