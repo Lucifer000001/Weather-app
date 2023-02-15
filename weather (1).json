@@ -1,0 +1,47 @@
+{
+    "coord": {
+        "lon": 77.2167,
+        "lat": 28.6667
+    },
+    "weather": [
+        {
+            "id": 721,
+            "main": "Haze",
+            "description": "haze",
+            "icon": "50n"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 18.05,
+        "feels_like": 17.01,
+        "temp_min": 18.05,
+        "temp_max": 18.05,
+        "pressure": 1016,
+        "humidity": 42
+    },
+    "visibility": 3500,
+    "wind": {
+        "speed": 2.06,
+        "deg": 270
+    },
+    "clouds": {
+        "all": 0
+    },
+    "dt": 1676389703,
+    "sys": {
+        "type": 1,
+        "id": 9165,
+        "country": "IN",
+        "sunrise": 1676338259,
+        "sunset": 1676378394
+    },
+    "timezone": 19800,
+    "id": 1273294,
+    "name": "Delhi",
+    "cod": 200
+}
+
+
+
+<span><img className="img-fluid" src={`https://openweathermap.org/img/wn/${data.weather.icon}@2x.png`}/></span>
