@@ -9,12 +9,6 @@ root.render(
     <App />
   </React.StrictMode>
 );
-const moon1 = document.querySelector('.moon');
-const body = document.querySelector('body');
-moon1.onclick = function(){
-    body.classList.toggle('sun');
-}
-
 function stars(){
   let count=500;
   let scene = document.querySelector('.scene');
