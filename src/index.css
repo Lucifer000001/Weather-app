@@ -6,25 +6,28 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 .scene {
   position: relative;
   width: 100%;
   min-height: 100vh;
   max-height: fit-content;
-  background: linear-gradient(#111425,#3751e0);
+  background: linear-gradient(#111425, #3751e0);
   background-attachment: fixed;
   overflow: hidden;
 }
-.sun .scene{
-  background: linear-gradient(#a6d8ff,#fff,#fff)
+
+.sun .scene {
+  background: linear-gradient(#a6d8ff, #fff, #fff)
 }
 
-.moon{
+.moon {
   position: relative;
   top: 77px;
   left: 87px;
@@ -34,7 +37,8 @@ body {
   border-radius: 50%;
   z-index: 1000;
 }
-.moon::after{
+
+.moon::after {
   content: '';
   position: absolute;
   top: -15px;
@@ -42,11 +46,12 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: linear-gradient(#111425,#3751e0);
+  background: linear-gradient(#111425, #3751e0);
   background-attachment: fixed;
   transition: 0.2s;
 }
-.sun .moon::after{
+
+.sun .moon::after {
   position: relative;
   top: 77px;
   left: 87px;
@@ -60,15 +65,17 @@ body {
   cursor: pointer;
   transition: 0.2s;
 }
-.forest{
-  position: absolute ;
+
+.forest {
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
   transform: scale(1.2);
 }
-.scene i{
+
+.scene i {
   width: 100%;
   position: absolute;
   background: #fff;
@@ -76,20 +83,24 @@ body {
   animation: animate linear infinite;
 }
 
-@keyframes animate{
-  0%{
-      opacity: 0;
-      transform: translateY(0);
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
   }
-  10%,90%{
-      opacity: 1;
+
+  10%,
+  90% {
+    opacity: 1;
   }
-  100%{
-      opacity: 0;
-      transform: translateY(-100px);
+
+  100% {
+    opacity: 0;
+    transform: translateY(-100px);
   }
 }
-.cloud1{
+
+.cloud1 {
   position: absolute;
   top: 25%;
   left: 0;
@@ -98,25 +109,28 @@ body {
   animation: animatecloud 50s linear infinite;
 
 }
-.cloud2{
+
+.cloud2 {
   position: absolute;
   top: 25%;
   left: 0;
   z-index: 10000;
   max-width: 500px;
   animation: animatecloud 35s linear infinite;
-  
+
 }
-.cloud3{
+
+.cloud3 {
   position: absolute;
   top: 25%;
   left: 0;
   z-index: 10000;
   max-width: 600px;
   animation: animatecloud 80s linear infinite;
-  
+
 }
-.cloud4{
+
+.cloud4 {
   position: absolute;
   top: 200px;
   left: 0;
@@ -125,7 +139,8 @@ body {
   animation: animatecloud 70s linear infinite;
   animation-delay: -20s;
 }
-.cloud5{
+
+.cloud5 {
   position: absolute;
   top: 150px;
   left: 0;
@@ -134,7 +149,8 @@ body {
   animation: animatecloud 40s linear infinite;
   animation-delay: -5s;
 }
-.cloud6{
+
+.cloud6 {
   position: absolute;
   top: 30%;
   left: 0;
@@ -143,26 +159,32 @@ body {
   animation: animatecloud 30s linear infinite;
   animation-delay: -10s;
 }
-@keyframes animatecloud{
-  0%{
-      transform: translateX(-100%) scale(1);
+
+@keyframes animatecloud {
+  0% {
+    transform: translateX(-100%) scale(1);
   }
-  100%{
-      transform: translateX(400%) scale(1.5) ;
+
+  100% {
+    transform: translateX(400%) scale(1.5);
   }
 }
-p{
+
+p {
   font-size: 1.6rem;
 }
-h1{
+
+h1 {
   font-size: 6rem;
 }
-.c1{
+
+.c1 {
   font-size: 1rem;
 }
-.app{
+
+.app {
   position: absolute;
-  background-color: rgba(0, 0, 0,0.4);
+  background-color: rgba(0, 0, 0, 0.4);
   color: #fff;
   z-index: 12000;
   top: 4%;
@@ -171,20 +193,21 @@ h1{
   width: 93%;
   /* height: 100%; */
 }
-.app .search{
+
+.app .search {
   text-align: center;
   padding: 1rem;
 }
 
-h3#m1{
+h3#m1 {
   margin-bottom: 7px;
 }
 
-.app input:focus{
+.app input:focus {
   outline: none;
 }
 
-.app input{
+.app input {
   padding: .7rem 1.2rem;
   font-size: 1.2rem;
   border-radius: 12px;
@@ -195,10 +218,12 @@ h3#m1{
     sans-serif;
   color: #f8f8f8;
 }
-::placeholder{
+
+::placeholder {
   color: #f8f8f8;
 }
-.container{
+
+.container {
   max-width: 700px;
   height: 340px;
   margin: auto;
@@ -209,42 +234,56 @@ h3#m1{
   flex-direction: column;
   justify-content: space-between;
 }
-.app .top{
+
+.app .top {
   margin-top: -1.5rem;
 }
-.app .discription{
+
+.app .discription {
   position: relative;
   /* right: -90%; */
   margin-top: auto;
-transform-origin: 0 0;
-transform: rotate(269deg);
+  transform-origin: 0 0;
+  transform: rotate(269deg);
 }
-.main_type{
+
+.main_type {
   display: flex;
   justify-content: space-between;
 }
-.main_icon{
+
+.sun .main_icon img {
+  filter: invert(100%) sepia(98%) saturate(8%) hue-rotate(155deg) brightness(102%) contrast(106%);
+
+}
+
+.main_icon {
   display: flex;
   flex-direction: row-reverse;
 }
-.main_icon img{
+
+.main_icon img {
   width: 85px;
+  object-fit: contain;
 }
-.app .bottom{
+
+.app .bottom {
   display: flex;
   justify-content: space-evenly;
   text-align: center;
   width: 100%;
   border-radius: 12px;
-  padding:10px;
+  padding: 10px;
   background-color: rgba(255, 255, 255, 0.2);
 
 }
-.bold{
+
+.bold {
   font-weight: 500;
   font-size: 1.4rem;
   margin-bottom: 2px;
 }
+
 .container3 {
   overflow-x: scroll;
   white-space: nowrap;
@@ -252,30 +291,67 @@ transform: rotate(269deg);
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
 }
+
 .container3::-webkit-scrollbar {
   display: none;
 }
-.box1, .box2, .box3, .box4 {
+
+.box1,
+.box2,
+.box3,
+.box4 {
   min-width: 50%;
   height: auto;
   display: inline-block;
   text-align: center;
   scroll-snap-align: start;
-  border-right: 2px  dotted rgb(255, 255, 255);
-  border-left: 2px  dotted rgb(255, 255, 255);;
+  border-right: 2px dotted rgb(255, 255, 255);
+  border-left: 2px dotted rgb(255, 255, 255);
+  ;
   font-size: 14px;
   text-align: center;
 
 }
-#m1{
+
+#m1 {
   text-align: center;
   margin-top: 20px;
 }
-.middle{
-margin-top: 20px;
+
+.middle {
+  margin-top: 20px;
 }
+
 @media screen and (max-width: 734px) {
-  .box1, .box2, .box3, .box4 {
+
+  .main_type {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .app .discription {
+    position: relative;
+    /* right: -90%; */
+    margin-top: auto;
+    transform-origin: 0 0;
+    transform: rotate(269deg);
+    margin-left: 20px;
+  }
+
+  .main_icon img {
+    width: 70px;
+    object-fit: contain;
+  }
+
+  .main_type {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .box1,
+  .box2,
+  .box3,
+  .box4 {
     min-width: 50%;
     height: auto;
     display: inline-block;
@@ -284,88 +360,175 @@ margin-top: 20px;
     border-right: 2px dotted rgb(255, 255, 255);
     font-size: 14px;
     text-align: center;
-  
+
   }
+
   .scene {
     position: relative;
     width: 100%;
     height: 105vh;
     scroll-behavior: smooth;
-    background: linear-gradient(#111425,#3751e0);
+    background: linear-gradient(#111425, #3751e0);
     background-attachment: fixed;
     overflow: hidden;
   }
-  .app .bottom{
+
+  .app .bottom {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     text-align: center;
-    width: 100%;
+    width: 80%;
+    margin: auto;
     border-radius: 12px;
     margin-top: auto;
     background-color: rgba(255, 255, 255, 0.2);
   }
-  .feelslike{
+
+  .feelslike {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-around;
-   
+    justify-content: space-between;
+    line-height: 1.8rem;
   }
- .temp h1{
-  font-size: 50px;
- }
 
- .moon{
-  position: relative;
-  top: 100px;
-  left: 150px;
-  width: 50px;
-  height: 50px;
-  background: #fff;
-  border-radius: 50%;
-  z-index: 1000;
-}
-.moon::after{
-  content: '';
-  position: absolute;
-  top: -15px;
-  left: 15px;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: linear-gradient(#111425,#3751e0);
-  background-attachment: fixed;
-  transition: 0.3s;
-}
-.sun .moon::after{
-  position: relative;
-  top: 77px;
-  left: 87px;
-  width: 100px;
-  height: 100px;
-  background: #fff;
-  border-radius: 50%;
-  z-index: 12000;
-  transform: translateX(-50%);
-  box-shadow: 0 0 50px #fff;
-  cursor: pointer;
-  transition: 0.2s;
-}
-.middle{
-  margin-top: 0px;
+  .temp h1 {
+    font-size: 50px;
   }
-  .app{
+
+  .moon {
+    position: relative;
+    top: 100px;
+    left: 150px;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 1000;
+  }
+
+  .moon::after {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 15px;
+    width: 100%;
     height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(#111425, #3751e0);
+    background-attachment: fixed;
+    transition: 0.3s;
+  }
+
+  .sun .moon::after {
+    position: relative;
+    top: 77px;
+    left: 87px;
+    width: 100px;
+    height: 100px;
+    background: #ffffff;
+    border-radius: 50%;
+    z-index: 12000;
+    transform: translateX(-50%);
+    box-shadow: 0 0 50px #fff;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  .middle {
+    margin-top: 0px;
+  }
+
+  .app {
+    height: 112vh;
+  }
+
+  .scene {
+    height: 125vh;
   }
 }
 
-@media screen and (max-width: 450px){
+/* @media screen and (max-width: 450px){
   .scene{
-    height: 106vh;
+    height: 125vh;
+  }
+  .app{
+    height: 120vh;
+  }
+  .temp h1{
+    font-size: 40px;
+    margin-left: 20px;
+   }
+   .main_icon{
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .location{
+    width: 80%;
+    margin: auto;
+  }
+  
+} */
+@media only screen and (min-width: 734px) and (max-width: 1200px) {
+  .scene {
+    height: 120vh;
+  }
+
+  .app {
+    height: 110vh;
+  }
+
+  .location {
+    width: 80%;
+    margin: auto;
+  }
+
+  .app .bottom {
+
+    justify-content: space-evenly;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    border-radius: 12px;
+    margin-top: auto;
+    background-color: rgba(255, 255, 255, 0.2);
   }
 }
-@media only screen and (min-width: 734px) and (max-width: 1200px){
-  .app{
-    height: 90%;
+
+@media screen and (max-width: 375px) {}
+
+@media screen and (max-width: 438px) and (min-width:380px) {
+
+  /* .scene{
+    height: 120vh;
   }
+ 
+  .app{
+    height: 110vh;
+  }
+   */
+  .scene {
+    height: 100vh;
+  }
+
+  .app {
+    height: 90vh;
+  }
+
+  .temp h1 {
+    font-size: 40px;
+    margin-left: 20px;
+  }
+
+  .main_icon {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .location {
+    width: 80%;
+    margin: auto;
+  }
+
+
 }
